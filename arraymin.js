@@ -3,3 +3,4 @@ for(i=0;i<a.length;i++){
    let sec = a[i]*60;
     console.log(sec);
 }
+
