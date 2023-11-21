@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./"></script>
+</head>
+<body>
+    <form id="myForm">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName"><br><br>
+        
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName"><br><br>
+        
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label>
+        
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+        <br><br>
+        
+        <label for="city">City</label>
+        <select name="city" id="city">
+            <option selected>select city</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Pune">Pune</option>
+            <option value="Delhi">Delhi</option>
+        </select>
+        <br><br>
+        
+        <input type="submit" id="submit">
+    </form>
+
+    <script>
+        // Get the form element by its ID
+        const form = document.getElementById("myForm");
+
+        // Add an event listener for form submission
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+            
+            // Get the values of the form fields
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const city = document.getElementById("city").value;
+
+            // Print the values to the console
+            console.log("First Name: " + firstName);
+            console.log("Last Name: " + lastName);
+            console.log("Gender: " + gender);
+            console.log("City: " + city);
+        });
+    </script>
+</body>
+</html>
