@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inpute Attribute Example</title>
 </head>
 <body>
-    
+    <h1>User Profile</h1>
+    <form action="updatprofile.php" method="post">
+        <label for="username">username</label>
+        <input type="text" id="username" name="username" required placeholder=" Enter your username">
+        <br><br>
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" required placeholder="you@gmail.com">
+        <br><br>
+        <label for="birthdate">date of birth</label>
+        <input type="date" id="date" name="date" max="2005-12-31" required>
+        <br><br>
+        <label for ="bio">bio</label>
+        <textarea id="bio" name="bio" maxlength="250" placeholder="about us"></textarea>
+        <br><br>
+        <button type="submit"> Update Profile</button>
+    </form>
 </body>
 </html>
